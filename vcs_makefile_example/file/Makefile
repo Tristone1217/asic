@@ -1,7 +1,7 @@
 .PHONY: com sim cov run_dve run_verdi clean
 
-OUTPUT = simv_simple_fsm
-ALL_DEFINE = +define+DUMP_VDP
+OUTPUT = simv_simple_fsm        #the name of output file
+ALL_DEFINE = +define+DUMP_VDP  
 ALL_DEFINE += +define+DUMP_FSDB
 
 # code coverage command
