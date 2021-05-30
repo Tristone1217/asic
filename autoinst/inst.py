@@ -1,4 +1,7 @@
 #!/usr/bin/python
+#### usage: r! inst xxxx.v
+
+
 import sys
 import re
  
@@ -7,19 +10,19 @@ maxlen=0
 maxbw =0
 
 #global match mode
-comment_pt=r'^\s*\/\/'
-cmatch    =re.compile(comment_pt)
+comment_pt=r'^\s*\/\/'              #comment pattern
+cmatch    =re.compile(comment_pt)   
 
-module_pt =r'module\s+(\w+)'
+module_pt =r'module\s+(\w+)'        #module pattern
 mmatch    =re.compile(module_pt)
 
-parameter_pt=r'parameter\s*(\w+)\s*=.*'
+parameter_pt=r'parameter\s*(\w+)\s*=.*'  #parameter  pattern
 pmatch      =re.compile(parameter_pt)
 
-signal_pt =r'(output|input|inout)\s*(wire|reg|\s)\s*(\[.*?:.*?\]|\s)\s*(\w+)\s*[,; \n]'
+signal_pt =r'(output|input|inout)\s*(wire|reg|\s)\s*(\[.*?:.*?\]|\s)\s*(\w+)\s*[,; \n]'  #signal pattern
 smatch    =re.compile(signal_pt)
 
-end_pt    = r'^\s*endmodule'
+end_pt    = r'^\s*endmodule'               #endmodule pattern
 ematch    = re.compile(end_pt)
 
 #caculate the max length
@@ -39,6 +42,7 @@ def calc_maxlen(rtlfile):
                 maxlen=len(p_tmp)
         if smatch.findall(line):
             s_tmp=smatch.findall(line)[0]
+            print(s_tmp[2])
             if len(s_tmp[3])>maxlen:
                 maxlen=len(s_tmp[3])
             if len(s_tmp[2].replace('/t',''))>maxbw:
@@ -57,7 +61,7 @@ def igen(rtlfile):
     start =0
     end   =0
     md_name=''
-    ins_name='U_'+md_name
+    ins_name=md_name+'_u'
 
     file=rtlfile
     test=open(file)
@@ -73,7 +77,7 @@ def igen(rtlfile):
         if comment_mc:
             pass
         elif module_mc:
-            md_name=module_mc.group(1)
+            md_name=module_mc.group(1)   #group(1) means the last match
             start=1
         elif end==1:
             start=0
@@ -88,7 +92,7 @@ def igen(rtlfile):
             end=1
     test.close
 
-    ins_name='U_'+md_name.upper()
+    ins_name=md_name.lower()+'_u'
 
     #print head
     head_fmt0='/'*2+'-'*58
@@ -116,9 +120,9 @@ def igen(rtlfile):
     
     #print module name
     if len(params)==0:
-        print "%-s %-s("%(md_name,ins_name)
+        print "%-s %-s("%(md_name.upper(),ins_name)
     else:
-        print "%-s #("%md_name
+        print "%-s #("%md_name.upper()
     
     #print instance of parameter
     if len(params)==0:
