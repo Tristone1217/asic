@@ -1,0 +1,3 @@
+Command Line: /usr/synopsys/verdi-L-2016.06-1/platform/LINUXAMD64/bin/Novas -f file_list.f -nologo -ssf simv_simple_fsm.fsdb
+uname(Linux lizhen 4.19.128-microsoft-standard #1 SMP Tue Jun 23 12:58:10 UTC 2020 x86_64)
+au time 59.770501 5.515194 4.136379 delta 278089728 278089728 total 667250688 667250688

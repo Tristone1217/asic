@@ -1,0 +1,5 @@
+hello:world
+linux:redhat:lalala:hahaha
+along:love:youou
+
+-size 1920 1520

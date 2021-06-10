@@ -1,0 +1,15 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/mnt/mydata/asic/vcs_makefile_example/file
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+TOP=tb_simple_fsm 
+OPTION=-ssz -ssv -ssy -ssz -ssv -ssy 
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/mnt/mydata/asic/vcs_makefile_example/file"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="L-2016.06"  />
+      <fileinfo name="./simple_fsm.v"  id="0"  />
+      <fileinfo name="./tb_simple_fsm.v"  id="1"  />
+    </srcinfo>

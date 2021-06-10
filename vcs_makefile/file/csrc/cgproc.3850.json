@@ -1,0 +1,55 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_3850_archive_1.a",
+            "size": 70142,
+            "objects": [
+                [
+                    "reYIK_d.o",
+                    41931
+                ],
+                [
+                    "TZWp6_d.o",
+                    28211
+                ]
+            ]
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "tb_simple_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "bytes": 7568,
+            "out": "objs/amcQw_d.o",
+            "mode": 4,
+            "checksum": 0
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "bytes": 41931,
+            "out": "reYIK_d.o",
+            "mode": 4,
+            "archive": "archive.0/_3850_archive_1.a",
+            "checksum": 0
+        },
+        "TZWp6_d": {
+            "mod": "tb_simple_fsm",
+            "bytes": 28211,
+            "out": "TZWp6_d.o",
+            "mode": 4,
+            "archive": "archive.0/_3850_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "reusePaths": {}
+}

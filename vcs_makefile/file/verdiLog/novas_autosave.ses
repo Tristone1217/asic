@@ -1,0 +1,70 @@
+@verdi rc file Version 1.0
+[General]
+VerdiVersion = Verdi3_L-2016.06-1
+[KeyNote]
+Line1 = Automatic Backup 0
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+powerDumped = 0
+[hb]
+postSimFile = /mnt/mydata/asic/vcs_makefile_example/file/simple_fsm.fsdb
+syncTime = 0
+viewport = 0 31 1870 861 613 337 228 898
+activeNode = "tb_simple_fsm.simple_fsm_inst"
+activeScope = "tb_simple_fsm.simple_fsm_inst"
+activeFile = "./simple_fsm.v"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 16
+baMode = False
+srcLineNum = True
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "tb_simple_fsm.simple_fsm_inst"
+Scope2 = "tb_simple_fsm"
+multipleSelection = 1 29 5 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.sourceTab.1]
+scope = tb_simple_fsm.simple_fsm_inst
+File = /mnt/mydata/asic/vcs_makefile_example/file/simple_fsm.v
+Line = 17
+[imp.design1]
+dbEnum =  oh
+invokeDir = /mnt/mydata/asic/vcs_makefile_example/file
+design = DebussyLib
+hostCommand = hostCommand -f file_list.f
+[nMemoryManager]
+FsdbFile = /mnt/mydata/asic/vcs_makefile_example/file/simple_fsm.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 28 1870 334 100 65
+SessionFile = /mnt/mydata/asic/vcs_makefile_example/file/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSync = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

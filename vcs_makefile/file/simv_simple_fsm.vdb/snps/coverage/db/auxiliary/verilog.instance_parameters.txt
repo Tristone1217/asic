@@ -1,0 +1,3 @@
+tb_simple_fsm.simple_fsm_inst.IDLE1
+tb_simple_fsm.simple_fsm_inst.ONE2
+tb_simple_fsm.simple_fsm_inst.TWO4

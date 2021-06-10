@@ -1,0 +1,61 @@
+
+Warning-[DBG_FLAG_DEP] Debug Option is being Deprecated
+  The '-fsdb' debug-related option is being deprecated and will no longer be 
+  supported in a future release.
+  Please recompile using the '-debug_access<+options>' switch and incremental 
+  options as required.  Recommended options are '-debug_access' for 
+  post-process debug, '-debug_access+classdbg' for testbench debug, and 
+  '-debug_access+all' for all debug capabilities.  Refer the VCS user guide 
+  for more granular options for debug control under the switch '-debug_access'
+  and refer to '-debug_region' for region control.
+
+Command: vcs -sverilog +v2k -timescale=1ns/1ns -debug_all +notimingcheck +nospecific \
++vcs+flush+all -full64 -fsdb +define+DUMP_VDP +define+DUMP_FSDB -cm line+cond+fsm+branch+tgl \
+-cm_name simv_simple_fsm -cm_dir ./simv_simple_fsm.vdb +vpdfile+simv_simple_fsm.vpd \
+-o simv_simple_fsm -l compile.log -f file_list.f
+                         Chronologic VCS (TM)
+         Version L-2016.06_Full64 -- Sun Jun  6 20:33:02 2021
+               Copyright (c) 1991-2016 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[UNK_COMP_ARG] Unknown compile time plus argument used
+  Unknown compile time plus argument 'nospecific' is ignored.
+
+ + use `+plusarg_save' to bind in runtime plusargs;
+ + use `+plusarg_ignore' to suppress this message.
+Parsing design file './simple_fsm.v'
+Parsing design file './tb_simple_fsm.v'
+Top Level Modules:
+       tb_simple_fsm
+TimeScale is 1 ns / 1 ns
+VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+***** Warning: +memcbk/-debug_access will not enable toggle coverage on MDAs.  Please use -cm_tgl mda to enable it.
+Starting vcs inline pass...
+2 unique modules to generate
+2 modules and 0 UDP read. 
+recompiling package std
+recompiling module tb_simple_fsm
+All of 2 modules done
+make[1]: Entering directory '/mnt/mydata/asic/vcs_makefile_example/file/csrc'
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv_simple_fsm ]; then chmod -x ../simv_simple_fsm; fi
+g++  -o ../simv_simple_fsm   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv_simple_fsm.daidir/ \
+-Wl,-rpath=./simv_simple_fsm.daidir/ -Wl,-rpath='$ORIGIN'/simv_simple_fsm.daidir//scsim.db.dir \
+-rdynamic   amcQwB.o objs/amcQw_d.o   _3850_archive_1.so  SIM_l.o       rmapats_mop.o \
+rmapats.o rmar.o  rmar_llvm_0_1.o rmar_llvm_0_0.o          /usr/synopsys/vcs-L-2016.06/linux64/lib/libzerosoft_rt_stubs.so \
+/usr/synopsys/vcs-L-2016.06/linux64/lib/libvirsim.so /usr/synopsys/vcs-L-2016.06/linux64/lib/liberrorinf.so \
+/usr/synopsys/vcs-L-2016.06/linux64/lib/libsnpsmalloc.so    /usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsnew.so \
+/usr/synopsys/vcs-L-2016.06/linux64/lib/libsimprofile.so /usr/synopsys/vcs-L-2016.06/linux64/lib/libreader_common.so \
+/usr/synopsys/vcs-L-2016.06/linux64/lib/libBA.a /usr/synopsys/vcs-L-2016.06/linux64/lib/libuclinative.so \
+-Wl,-whole-archive /usr/synopsys/vcs-L-2016.06/linux64/lib/libvcsucli.so -Wl,-no-whole-archive \
+_vcs_pli_stub_.o   /usr/synopsys/vcs-L-2016.06/linux64/lib/vcs_save_restore_new.o \
+/usr/synopsys/verdi-L-2016.06-1/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread \
+-ldl 
+../simv_simple_fsm up to date
+make[1]: Leaving directory '/mnt/mydata/asic/vcs_makefile_example/file/csrc'
+CPU time: .394 seconds to compile + .461 seconds to elab + .417 seconds to link
