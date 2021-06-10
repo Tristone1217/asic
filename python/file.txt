@@ -1,2 +1,0 @@
-module chan_cmd_ctrl
-module chan_cmd_ctrl_1x50g
