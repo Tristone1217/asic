@@ -1,0 +1,31 @@
+1. simple substitute
+    :%s/string/new/g
+    % means all the line in the file
+    g means all the strings matched in one line
+
+2. for the special line, substitute
+    :g /pattern/s/old/new/g
+    for line contain pattern, substitute old for new
+
+3. match the number, and operate on the number
+   example1:
+   :%s/\(\d\d\)/\=(submatch(1)+32)/gc 
+   or %s/\(\d\{2,}\)/\=(submatch(1)+32)/gc 
+
+   before substitute:   data_in [39:32]
+   after substitute :   data_in [71:64]
+
+   example2:
+   :%s/\(\[\)\(\d*\)\(\:\)/\=(submatch(1).(submatch(2)+32)).submatch(3)/g 
+
+   . means string concatenation
+   submatch(1) means the contents in the first parenthesis
+   submatch(2) means the contents in the second parenthesis
+   submatch(3) means the contents in the third parenthesis
+
+   before substitute:   data_in [39:32]
+   after substitute :   data_in [71:32]
+
+
+
+
