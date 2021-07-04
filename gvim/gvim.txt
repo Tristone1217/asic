@@ -31,5 +31,9 @@
    add 5: first press 5, then press ctrl+a
    subtract 1: press ctrl+s
    subtract 5: press 5, then press ctrl+x
-
-
+5. cw: change word,  delete from the current position to the end of a word.
+6. caw: change a word, delete the word at the current cursor positon.
+7. ci(: change inside, delete the content inside  the (), in a similar way, ci{,  ci[
+8.yi": yank inside the "" 
+9.ya": yank around the "", inculde the ""
+10. yw: yank from the current position to tne end of a word
