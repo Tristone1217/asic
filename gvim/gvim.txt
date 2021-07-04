@@ -26,6 +26,10 @@
    before substitute:   data_in [39:32]
    after substitute :   data_in [71:32]
 
-
+4. add/subtract a number
+   add 1: press ctrl+a
+   add 5: first press 5, then press ctrl+a
+   subtract 1: press ctrl+s
+   subtract 5: press 5, then press ctrl+x
 
 
