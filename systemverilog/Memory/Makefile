@@ -1,7 +1,6 @@
 .PHONY: com sim cov run_dve run_verdi clean
 
-#the name of output file
-OUTPUT = simv_simple_fsm
+OUTPUT = simv_simple_fsm#the name of output file
 ALL_DEFINE = +define+DUMP_VDP  
 ALL_DEFINE += +define+DUMP_FSDB
 
@@ -18,9 +17,9 @@ VCS = 	vcs 				                 \
 		-sverilog			                 \
 	 	+v2k 				                 \
 		+incdir+./rtl                        \
-		+incdir+./tb                         \   
+		+incdir+./tb                         \
 		-timescale=1ns/1ns	                 \
-      	-debug_all                           \
+      	-debug_all			                 \
 		+notimingcheck		                 \
 		+nospecific			                 \
 		+vcs+flush+all		                 \
@@ -33,16 +32,14 @@ VCS = 	vcs 				                 \
 		${VPD_NAME}			                 \
 		-o ${OUTPUT}		                 \
 		-l compile.log
-	
 
 # simulation command
-SIM = ./simv					\
+SIM = ./${OUTPUT}					\
 		${CM} 						\
 		${CM_NAME} 					\
 		${CM_DIR}					\
 		${VPD_NAME}					\
-		-l ${OUTPUT}.log           \	
-		-gui=verdi
+		-l ${OUTPUT}.log	
 
 # start compile
 com:
@@ -64,6 +61,6 @@ run_verdi:
 
 # start clean
 clean:  
-	    rm -rf  simv* *.daidir *.log *.vpd *.vdb *.key *.fsdb *.dat *.rc *.conf *race.out* DVEfiles verdiLog csrc *.vcd
+	    rm -rf  simv* *.daidir *.log *.vpd *.vdb *.key *.fsdb *.dat *.rc *.conf *race.out* DVEfiles verdiLog csrc
 
 
