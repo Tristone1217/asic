@@ -1,0 +1,20 @@
+# the useful alias in the 
+#
+#
+#set the gvim to maximum when open it
+alias g='gvim -geometry 80x25+100+300'
+#alias g='gvim -geometry 1336x744'
+alias ini='rm /tmp/.X2-lock; rm /tmp/.X11-unix/X2; lmgrd'
+alias cdw='cd /mnt/mydata/asic'
+alias pdf='evince'
+alias cd..='cd ..'
+
+alias gitst='git status'
+alias gitci='git commit'
+
+#alias the grep
+alias mygrep='mygrep() { grep $1 ./ -n --recursive; };mygrep'
+
+# get the name of a file, backup 
+alias cobak='cobak() { cp $1 $(sed "s/\./_bak\./" <<< $1); };cobak'
+
