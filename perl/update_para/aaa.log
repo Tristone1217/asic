@@ -1,0 +1,12 @@
+$opt_i =>; default_para.txt
+$opt_o =>; para.txt
+delete parameter: aaa5
+
+delete parameter: aaa6
+
+delete parameter: aaa12=0
+
+delete parameter: aaa15=0
+
+delete parameter: aaa16=0
+
