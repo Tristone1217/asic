@@ -6,6 +6,8 @@ OUTPUT = simv_simple_fsm#the name of output file
 ALL_DEFINE = +define+DUMP_VDP  
 ALL_DEFINE += +define+DUMP_FSDB
 
+AUTOFLUSH = +fsdb+autoflush 
+
 # code coverage command
 CM      = -cm line+cond+fsm+branch+tgl
 CM_NAME = -cm_name ${OUTPUT}
@@ -39,6 +41,7 @@ SIM = ./${OUTPUT}					\
 		${CM_NAME} 					\
 		${CM_DIR}					\
 		${VPD_NAME}					\
+		${AUTOFLUSH}				\
 		-l ${OUTPUT}.log	
 
 # start compile
@@ -61,6 +64,6 @@ run_verdi:
 
 # start clean
 clean:  
-	    rm -rf  simv* *.daidir *.log *.vpd *.vdb *.key *.fsdb *.dat *.rc *.conf *race.out* DVEfiles verdiLog csrc
+	    rm -rf  simv* *.daidir *.log *.vpd *.vdb *.key *.fsdb *.dat *.rc *.conf *race.out* DVEfiles verdiLog csrc *.chain *.field *.lock *.netwk *.pidat *.podat *.sinf *.slist *.str *.tlist *.xlist
 
 
