@@ -1,0 +1,9 @@
+#! /usr/bin/perl
+
+#example ./get_opt_practice_1 -a aa -b 12 -c
+use Getopt::Long;
+use vars qw($opt_a $opt_b $opt_c);
+GetOptions("a=s"=>\$opt_a,"b|opt_b:i"=>\$opt_b,"c"=>\$opt_c); # s(script) i(int) c(if"-c " opt_c is 1)
+print "opt_a =>;$opt_a\n" if $opt_a;
+print "opt_b =>;$opt_b\n" if $opt_b;
+print "opt_c =>;$opt_c\n" if $opt_c;
